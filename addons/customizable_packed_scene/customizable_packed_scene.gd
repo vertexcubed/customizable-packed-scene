@@ -1,8 +1,8 @@
 @tool
-@icon("res://addons/customizable_packed_scene/icon.svg")
+@icon("icon.svg")
 class_name CustomizablePackedScene
 extends Resource
-## A wrapper for a [PackedScene] that can have its properties set in the editor.
+## A wrapper for a PackedScene that can have its properties set in the editor.
 ##
 ## CustomizablePackedScene is useful for projects using exported PackedScenes. 
 ## Normally, when you assign a scene to an exported property, you can't override the default properties of the underlying scene. This wrapper type aims to fix that.
@@ -82,4 +82,3 @@ func _property_get_revert(property: StringName) -> Variant:
 	if property in overrides:
 		return _internal_instance.get(property)
 	return null
-
