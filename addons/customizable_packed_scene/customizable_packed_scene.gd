@@ -49,7 +49,7 @@ func _notification(what: int) -> void:
 	match what:
 		NOTIFICATION_PREDELETE:
 			if is_instance_valid(_internal_instance):
-				_internal_instance.queue_free()
+				_internal_instance.free.call_deferred()
 	
 func _get(property: StringName) -> Variant:
 	if not scene:
